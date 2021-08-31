@@ -1,0 +1,4 @@
+# variables access by all the hosts from the inventory file
+dbuser: redhat
+dbpass: admin123
+dbname: vprodb

@@ -20,13 +20,13 @@
 
     - name: creating the mysql database with accounts
       mysql_db:
-        name: accounts
+        name: "{{dbname}}"
         state: present
 
     - name: creating the mysql user with admin
       mysql_user:
-        name: admin
-        password: admin123
+        name: "{{dbuser}}"
+        password: "{{dbpass}}"
         priv: '*.*:ALL,GRANT'
         state: present
 
