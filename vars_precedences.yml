@@ -11,5 +11,8 @@
         comment: "{{COMM}}"
       register: usr_out
     - debug:
-        var: usr_out
+        var: usr_out.name
+    - debug:
+        var: usr_out.comment
+
 
