@@ -1,0 +1,11 @@
+- name: understanding the precendences of variables
+  hosts: all
+  become: true
+  vars:
+    USRNM: playuser
+    COMM: variable from playbook
+  tasks:
+    - name: creating the user
+      user:
+        name: "{{USRNM}}"
+        comment: "{{COMM}}"
